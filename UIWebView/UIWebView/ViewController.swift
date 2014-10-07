@@ -18,7 +18,8 @@ class ViewController: UIViewController,UIWebViewDelegate {
         test.loadHTMLString("<html><head></head><body><font size='6' color='red'>Test</font><img class='test' width=100% height=100% src=''></body></html>", baseURL: nil)
         test.frame = CGRect(x: 50, y: 100, width: 200, height: 300)
         test.alpha = 1
-        
+        test.opaque = false
+        test.backgroundColor = UIColor.clearColor()
         
         test.delegate = self
         
