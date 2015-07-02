@@ -13,6 +13,7 @@
 		DC3AC6021B338D0E0076EB60 /* BlueTooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3AC6011B338D0E0076EB60 /* BlueTooth.swift */; };
 		DC41E5351B38C35900A8891E /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC41E5341B38C35900A8891E /* Util.swift */; };
 		DC468E681B3B733300645B93 /* CustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC468E671B3B733300645B93 /* CustomHeaderCell.swift */; };
+		DC8C6C491B44AE17005E30F6 /* LogonSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = DC8C6C481B44AE17005E30F6 /* LogonSound.wav */; };
 		DCD7E0E21B193EA3005ED0DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7E0E11B193EA3005ED0DD /* AppDelegate.swift */; };
 		DCD7E0E41B193EA3005ED0DD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7E0E31B193EA3005ED0DD /* FirstViewController.swift */; };
 		DCD7E0E71B193EA3005ED0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD7E0E51B193EA3005ED0DD /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		DC3AC6011B338D0E0076EB60 /* BlueTooth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueTooth.swift; sourceTree = "<group>"; };
 		DC41E5341B38C35900A8891E /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		DC468E671B3B733300645B93 /* CustomHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomHeaderCell.swift; sourceTree = "<group>"; };
+		DC8C6C481B44AE17005E30F6 /* LogonSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LogonSound.wav; sourceTree = "<group>"; };
 		DCD7E0DC1B193EA3005ED0DD /* TryNavi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryNavi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD7E0E01B193EA3005ED0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCD7E0E11B193EA3005ED0DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		DCD7E0DF1B193EA3005ED0DD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DC8C6C481B44AE17005E30F6 /* LogonSound.wav */,
 				DCD7E0E01B193EA3005ED0DD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -182,6 +185,7 @@
 				TargetAttributes = {
 					DCD7E0DB1B193EA3005ED0DD = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Z69WJW2AGX;
 					};
 					DCD7E0F01B193EA3005ED0DD = {
 						CreatedOnToolsVersion = 6.4;
@@ -215,6 +219,7 @@
 			files = (
 				DCD7E0E71B193EA3005ED0DD /* Main.storyboard in Resources */,
 				DCD7E0EC1B193EA3005ED0DD /* LaunchScreen.xib in Resources */,
+				DC8C6C491B44AE17005E30F6 /* LogonSound.wav in Resources */,
 				DCD7E0E91B193EA3005ED0DD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TryNavi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -379,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TryNavi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

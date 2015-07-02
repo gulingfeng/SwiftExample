@@ -23,8 +23,8 @@ class ViewController: UIViewController {
     func testDB()
     {
         println("start testdb")
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let db = FMDatabase(path: appDelegate.dbFilePath)
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let db = FMDatabase(path: appDelegate.dbFilePath as String)
         
         if db.open()
         {

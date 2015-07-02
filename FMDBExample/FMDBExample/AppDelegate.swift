@@ -52,14 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let DATABASE_FILE_NAME = "tempdb.sqlite"
     
     func initializeDb() -> Bool {
-        let documentFolderPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        let documentFolderPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
         
         let dbfile = "/" + DATABASE_FILE_NAME;
         
         self.dbFilePath = documentFolderPath.stringByAppendingString(dbfile)
         
         let filemanager = NSFileManager.defaultManager()
-        if (!filemanager.fileExistsAtPath(dbFilePath) ) {
+        if (!filemanager.fileExistsAtPath(dbFilePath as String) ) {
             
             let backupDbPath = NSBundle.mainBundle().pathForResource(DATABASE_RESOURCE_NAME, ofType: DATABASE_RESOURCE_TYPE)
             
@@ -67,7 +67,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 return false
             } else {
                 var error: NSError?
-                let copySuccessful = filemanager.copyItemAtPath(backupDbPath!, toPath:dbFilePath, error: &error)
+                let copySuccessful = filemanager.copyItemAtPath(backupDbPath!, toPath:dbFilePath as String, error: &error)
                 if !copySuccessful {
                     println("copy failed: \(error?.localizedDescription)")
                     return false

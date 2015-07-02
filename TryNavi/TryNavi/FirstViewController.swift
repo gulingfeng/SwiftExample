@@ -23,10 +23,14 @@ class FirstViewController: UIViewController, AVAudioRecorderDelegate {
         
         audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
         audioSession.setActive(true, error: nil)
-        
+        var musicPath = NSBundle.mainBundle().URLForResource("LogonSound", withExtension: "wav")
+        Util.shared.printLog("musicPath:\(musicPath)")
         let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! String
+        Util.shared.printLog("file path:\(path)")
         recorder = AVAudioRecorder(URL: NSURL(fileURLWithPath: "\(path)/sound.wav"), settings: nil, error: nil)
+        //recorder = AVAudioRecorder(URL: musicPath, settings: nil, error: nil)
         recorder.delegate = self
+        
         Util.shared.printLog("\(recorder.prepareToRecord())")
     }
 
@@ -63,7 +67,9 @@ class FirstViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func playSound(sender: UIButton) {
+
         player = AVAudioPlayer(contentsOfURL: recorder.url, error: nil)
+        //player = AVAudioPlayer(contentsOfURL: musicPath!, error: nil)
         player.prepareToPlay()
         player.volume = 2
         player.play()

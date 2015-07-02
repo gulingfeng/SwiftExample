@@ -124,7 +124,7 @@ class ThirdTableViewController: UITableViewController {
             var sc = segue.destinationViewController as! DetailViewController
             var index = self.tableView.indexPathForSelectedRow()
             
-            Util.shared.printLog("prepareForSegue section:\(index?.section), index:\(index!.row)")
+            Util.shared.printLog("prepareForSegue section:\(index!.section), index:\(index!.row)")
             sc.cb = self.devices.values.array[index!.row]
             
         }
